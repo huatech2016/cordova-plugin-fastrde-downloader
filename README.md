@@ -21,7 +21,7 @@ Phonegap plugin to download a List of files or a single file to the Phone, check
 
 ## install
 ```
-yourAppDir$ phonegap plugin add https://github.com/fastrde/phonegap-downloader.git
+yourAppDir$ cordova plugins add https://github.com/huatech2016/cordova-plugin-fastrde-downloader.git
 ```
 
 ## usage
