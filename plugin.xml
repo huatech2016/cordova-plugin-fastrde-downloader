@@ -13,7 +13,7 @@
 	<dependency id="cordova-plugin-zip" version="2.1.0" />
 	<dependency id="cordova-plugin-fastrde-md5" version="0.2.0" />	
 
-	<js-module src="www/downloader.min.js" name="downloader">
+	<js-module src="www/downloader.js" name="downloader">
 		<clobbers target="downloader" />
 	</js-module>
 </plugin>
