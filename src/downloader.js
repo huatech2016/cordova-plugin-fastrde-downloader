@@ -73,7 +73,7 @@ var Downloader = {
   /** @type {FileTransfer} */
   transfer: null,
   /** @type {int} */
-  retry: 3,
+  retry: 1,
 
   /**
    * prepare Downloader
@@ -438,7 +438,7 @@ var Downloader = {
     Downloader.initialized = false;
     Downloader.loading = false;
     Downloader.unzipping = false;
-    Downloader.retry = 3;
+    Downloader.retry = 1;
   },
 
   /*************************************************************** getter */
@@ -512,7 +512,7 @@ var Downloader = {
       Downloader.fileObjectInProgress = null;
     }
     // reset retry counter;
-    Downloader.retry = 3;
+    Downloader.retry = 1;
   },
   /**
    * @param {Object} event
