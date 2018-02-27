@@ -117,23 +117,25 @@ var Downloader = {
    * @param {String} url
    * @param {?String} md5
    */
-  load: function(url, md5) {
+    load: function (url, fileName) {
     //console.log("load");
     //console.log("loading "+url);
-    md5 = md5 || null;
+        fileName = fileName || null;
     if (!Downloader.isInitialized()) {
       //console.log("wait for initialization");
       document.addEventListener("DOWNLOADER_initialized", function onInitialized(event) {
         //console.log("initialization done");
         event.target.removeEventListener("DOWNLOADER_initialized", onInitialized, false);
-        Downloader.load(url, md5);
+                Downloader.load(url, fileName);
       }, false);
       return;
     }
     var fileObject = {
       url: url,
-      name: url.replace(/^.*\//, ""),
-      md5: md5
+            //name: url.replace(/^.*\//, ""),
+            //name: decodeURIComponent(url.replace(/^.*\/.*name=/, "").replace(/&mode.*/, "")),
+            name: fileName,
+            md5: ""
     };
     Downloader.downloadQueue.push(fileObject);
     if (!Downloader.isLoading()) {
@@ -611,10 +613,10 @@ var Downloader = {
       /**
        * downlaods file at url and check md5sum if enabled
        * @param {String} url
-       * @param {String} md5
+         * @param {String} fileName
        * 
        */
-      get: function(url, md5) {
+        get: function (url, fileName) {
         /*if (!Downloader.isInitialized()){
           console.error("You have to initialize Downloader first");
           return;
@@ -627,7 +629,7 @@ var Downloader = {
           document.dispatchEvent(createEvent("DOWNLOADER_noWifiConnection"));
           return;
         }
-        return Downloader.load(url, md5);
+            return Downloader.load(url, fileName);
       },
       /**
        * downloads multiple Files in a row
