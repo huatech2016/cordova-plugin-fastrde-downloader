@@ -7,11 +7,11 @@
 	<keywords>file,download,checksum,md5,unzip</keywords>
 	<repo>https://github.com/fastrde/cordova-plugin-fastrde-downloader.git</repo>
 	<issue>https://github.com/fastrde/cordova-plugin-fastrde-downloader/issues</issue>
-	<dependency id="cordova-plugin-file" />
-	<dependency id="cordova-plugin-file-transfer" version="0.4.8" />
-	<dependency id="cordova-plugin-network-information" version="0.2.14" />
-	<dependency id="cordova-plugin-zip" version="2.1.0" />
-	<dependency id="cordova-plugin-fastrde-md5" version="0.2.0" />	
+	<dependency id="cordova-plugin-file"/>
+	<dependency id="cordova-plugin-file-transfer" />
+	<dependency id="cordova-plugin-network-information"  />
+	<dependency id="cordova-plugin-zip"  />
+	<dependency id="cordova-plugin-fastrde-md5" version="0.2.0"/>	
 
 	<js-module src="www/downloader.js" name="downloader">
 		<clobbers target="downloader" />
