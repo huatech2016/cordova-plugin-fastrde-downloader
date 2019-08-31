@@ -449,7 +449,7 @@ var Downloader = {
   getFilesystem: function() {
     if (Downloader.fileSystemURL) {
       //console.log("Using fileSystemURL:" + Downloader.fileSystemURL);
-      window.resolveLocalFileSystemURI(Downloader.fileSystemURL, function(rootfolder) {
+      window.resolveLocalFileSystemURL(Downloader.fileSystemURL, function(rootfolder) {
         document.dispatchEvent(createEvent("DOWNLOADER_gotFileSystem", [rootfolder]));
       }, function(error) {
         document.dispatchEvent(createEvent("DOWNLOADER_error", [error]));
