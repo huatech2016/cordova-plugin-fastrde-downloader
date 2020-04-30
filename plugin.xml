@@ -10,7 +10,6 @@
 	<dependency id="cordova-plugin-file"/>
 	<dependency id="cordova-plugin-file-transfer" />
 	<dependency id="cordova-plugin-network-information"  />
-	<dependency id="cordova-plugin-zip"  />
 
 	<js-module src="www/downloader.js" name="downloader">
 		<clobbers target="downloader" />
